@@ -1,0 +1,12 @@
+[Unit]
+Description=internetbot container
+Requires=docker.service
+After=docker.service
+[Service]
+User=$(whoami)
+Restart=on-failure
+RestartSec=45
+ExecStart=/usr/bin/docker start -a bot
+ExecStop=/usr/bin/docker stop -t 2 bot
+[Install]
+WantedBy=multi-user.target

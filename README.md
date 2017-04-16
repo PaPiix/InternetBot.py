@@ -14,7 +14,7 @@ Store your bot's token into a `token.txt`:
 echo YOUR_TOKEN_HERE > token.txt
 ```
 
-For docker, simply run the Dockerfile with `docker build -t internetbot .`
+For docker, simply run the Dockerfile with `docker build -t internetbot .`. If you're using docker you can setup a service by moving `internetbot.service` to `/lib/systemd/system/`.
 
 Otherwise run `./Install.sh` and then `./Start.sh`.
 
